@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>INAGAMES</title>
+		<style type="text/css">
+			header, section, footer, aside, nav, article, figure, figcaption {
+				display: block;}
+			body {
+				color: #666666;
+				background-color: #f9f8f6;
+				background-image: url("images/game.jpg"); /*lokasi gambar*/
+				background-position: center;
+				font-family: Georgia, Times, serif;
+				line-height: 1.4em; /*Posisi kata kata pada home dinaikan/diturunkan*/
+				margin: 0px;}
+			.wrapper {
+				width: 1000px; /*merperlebar body*/
+				margin: 0px auto 0px auto; /*memperkecil/memperbesar jarak antara header dan footer dengan pojok batas masing-masing*/
+				border: 0px solid #000000;  /*garis tepi pada bodi*/   
+				background-color: #ffffff;} /*meberi warna pada bodi*/
+			header {
+				height: 270px; /*merperlebar gambar yang bisa dilihat pada header*/
+				background-image: url(images/head.jpg);} /*lokasi gambar*/
+			h1 {
+				text-indent: -9999px;
+				width: 940px;
+				height: 130px;
+				margin: 0px;}
+			nav, footer {
+				clear: both;
+				color: blue; /*merubah warna text pada footer*/
+				background-color: #80C8FE;/*merubah warna pada footer dan navigator*/
+				height: 30px;} /*mempertinggi footer*/
+			nav ul {
+				margin: 0px;}
+			nav li {
+				display: inline; /*inline berarti vertical submenu jika inline-table berarti horizontal submenu jika none maka tidak ada submenu*/
+				margin-right: 0px;} /*memperbesar lebar navigator dan jarak kosong tiap menu*/
+			nav li a {
+				color: cyan;} /*merubah warna text saat disorot*/
+			nav li a:hover, nav
+			li a.current {
+				color: red;} /*memngubah warna text navigator Home*/
+			
+nav {
+	margin: 90px auto; /*menaikan/menurunkan navigator*/
+	text-align: center;
+}
+
+nav ul ul {
+	display: none;
+}
+
+	nav ul li:hover > ul {
+		display: block;
+	}
+
+
+nav ul {
+	background: #80C8FE; 
+	padding: 0 0px;
+	border-radius: 0px;  
+	list-style: none;
+	position: relative;
+	display: inline-table; /*jika inline maka akan vertikal navigator/ menhilang sendangkan inline-table agar navigator horizontal*/
+}
+	nav ul:after {
+		content: ""; clear: both; display: block;
+	}
+
+	nav ul li {
+		float: left; /*mengubah awal susunannya pada navigator*/
+	}
+		nav ul li:hover {
+			background: black; /*mengubah background warna saat disorot pada navigator*/
+		}
+			nav ul li:hover a {
+				color: cyan; /*saat disorot oleh mouse maka text pada navigator akan berubah*/
+			}
+		
+		nav ul li a {
+			display: block; padding: 15px 52.1px; /*mengatur lebar dan tinggi navigator*/
+			color: red; text-decoration: none; /*color : merubah warna text pada navigator*/
+		}
+			
+		
+	nav ul ul {
+		background: #80C8FE; border-radius: 0px; padding: 0px;
+		position: absolute; top: 100%;
+	}
+		nav ul ul li {
+			float: none; 
+			border-top: 0px solid #80C8FE;
+			border-bottom: 0px solid #53bd84; position: relative;
+		}
+			nav ul ul li a {
+				padding: 10px 79px; /*mengubah lebar dan tinggi pada submenu*/
+				color: red; 
+			}	
+				nav ul ul li a:hover {
+					background: black; /*mengubah warna background pada submenu*/
+				}
+		
+	nav ul ul ul {
+		position: absolute; left: 100%; top:0;
+	}
+			section.courses {
+				float: left;
+				width: 678px; /*semakin besar maka semakin bergeser content ke arah yang ditentukan oleh float*/
+				border-right: 0px solid #eeeeee;} /*menambahkan  garis tepi untuk aside*/
+			article {
+				clear: both;
+				overflow: auto;
+				width: 100%;}
+			hgroup {
+				margin-top: 27px;} /*menaikan/menurunkan kata-kata pada postingan di home*/
+			figure {
+				float: left;
+				width: 300px; /*memperbesar lebar daerah gambar pada home*/
+				height: 250px; /*memperbesar tinggi daerah gambar pada home*/
+				padding: 0px; /*memperbesar/memperkecil jarak antara border dengan gambar*/
+				margin: 10px; /*memperbesar/memperkecil jarak setiap gambar pada home*/
+				border: 1px solid #eeeeee;} /*menambahkan  garis pada tempat figure gambar*/
+			figcaption {
+				font-size: 90%;
+				text-align: left;}
+			aside {
+				width: 230px;
+				float: left;
+				padding: 0px 0px 0px 10px;} /*memperbesar/memperkecil jarak content dengan aside note : angka yang diganti yang paling kanan*/
+			aside section a {
+				display: block;
+				padding: 10px; /*memperbesar/memperkecil jarak setiap section pada aside*/
+				border-bottom: 0px solid #eeeeee;} /*menambahkan  garis pada section yang memiliki unsur link*/
+			aside section a:hover {
+				color: cyan; /*merubah warna text saat di sorot*/
+				background-color: black;} /*merubah warna background saat disorot*/
+			a {
+				color: #de6581;
+				text-decoration: none;}
+			h1, h2, h3 {
+				font-weight: normal;}
+			h2 {
+				margin: 10px 0px 5px 0px;
+				padding: 0px;}
+			h3 {
+				margin: 0px 0px 10px 0px;
+				color: gray;}
+			aside h2 {
+				padding: 30px 0px 10px 0px;
+				color: blue;}
+			footer {
+				font-size: 80%;
+				padding: 7px 0px 0px 20px;}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<h1>INAGAMES : Indonesia Games</h1>
+				<nav>
+					<ul>
+						<li><a href="index.html" class="current">Home</a></li>
+						<li><a href="">Review Games</a>
+							<ul>
+								<li><a href="article1.html">PC</a></li>
+								<li><a href="article1.html">Mobile</a></li>
+							</ul>
+						</li>
+						<li><a href="article2.html">List Games Studios</a></li>	
+						<li><a href="article3.html">Tips for Gamers</a></li>
+						<li><a href="article5.html">Technology</a></li>
+					</ul>
+				</nav>
+			</header>
+			<section class="courses">
+			<article>
+			<hgroup>
+			<h2 align="middle"><b>Manfaat Bermain Games</b></h2>
+			<p><b><br/>
+			1. Aktivitas Fisik<br/>
+Ada banyak video game di pasaran yang dalam pengoperasiannya memerlukan beberapa jenis aktivitas fisik. Apakah itu menari atau bermain gitar. Di sinilah dibutuhkan kecerdikan orang tua untuk memiliki jenis game untuk anak-anak mereka, yang dapat memaksa mereka (anak-anak) untuk bergerak ketimbang harus duduk di sofa sepanjang hari.
+<br/><br/>2. Kebugaran dan Gizi<br/>
+Banyak game yang menggabungkan unsur kebugaran, gizi dan hidup sehat sebagai tujuan utama permainan. Bahkan tidak sedikit game yang menyajikan tujuan utama permainan mereka pada kebugaran fisik yang bertujuan mendorong para pemain untuk menurunkan berat badan untuk mempertahankan gaya hidup sehat.
+<br/><br/>3. Koordinasi Mata dan Tangan<br/>
+Bermain video game sebenarnya dapat meningkatkan ketangkasan anak Anda, yang sangat berguna untuk melakukan aktivitas sehari-hari. Sebenarnya banyak jenis olahraga yang dapat dilakukan untuk meningkatkan koordinasi antara tangan dan mata, tetapi hal itu kurang menarik keinginan anak-anak untuk mencobanya.
+<br/><br/>4. Keterampilan Sosial<br/>
+Kurangnya keterampilan sosial dan kemampuan untuk berinteraksi dengan orang lain secara teratur dapat merusak perkembangan anak dan bahkan menyebabkan depresi. Anak-anak yang pemalu dan kurang percaya diri ketika bersosialisasi dengan teman mereka mungkin akan lebih mudah membuka diri saat bermain video game. Dengan bermain game online, anak-anak dapat berinteraksi dengan banyak orang, bahkan orang yang tidak mereka kenal.
+<br/><br/>5. Peningkatan Kemampuan Belajar<br/>
+Kompleksitas games memberikan anak Anda kesempatan untuk meningkatkan keterampilan kognitif seperti memecahkan masalah dan membuat keputusan. Video game telah berkembang ke titik di mana penggunanya harus mengambil kendali dan berpikir sendiri. Bahkan banyak permainan yang mendorong anak untuk menjadi sabar dan kreativ dalam memecahkan sebuah teka-teki sebelum mereka dapat maju ke tahap berikutnya.
+<br/><br/>6. Sportivitas dan Adil<br/>
+Sportivitas dan adil (fair play) adalah nilai-nilai yang umum dikembangkan dalam olahraga dan organisasi. Game secara tidak langsung menawarkan Anak Anda nilai-nilai ini, terutama saat bersaing satu sama lain.
+<br/><br/>7. Mengurangi Stres<br/>
+Stres tidak hanya dialami oleh orang tua tetapi juga anak-anak. Beberapa orang tua terkadang menaruh harapan dan tuntutan yang sebenarnya anak-anak mereka tidak suka, misalnya terkait hobi dan belajar. Bermain game dapat menjadi jalan keluar bagi anak Anda lepas dari tekanan untuk mengurangi tingkat stres.
+<br/><br/>8. Kerja Tim<br/>
+Kerjasama dan kebutuhan untuk membangun team work kuat pengaruhnya saat anak bermain video game. Beberapa game online misalnya, yang membutuhkan sebuah kerjasama tim untuk mencapai kemenangan.
+<br/><br/>9. Mengatasi Rasa Sakit<br/>
+Bermain video game bisa menjadi sarana untuk mengatasi rasa sakit fisik atau emosional, misalnya, pada orang yang sedang menderita suatu penyakit di mana hanya dapat melakukan aktivitas di kamar tidur.
+<br/><br/>10. Membuat Orang Senang<br/>
+Salah satu efek terbesar dari bermain game adalah membuat orang bahagia. Namun, sangat penting untuk membatasi waktu bermain game, karena ada kemungkinan bahwa alat ini membuat Anda menjadi kecanduan. Biarkan anak-anak Anda untuk bermain game sesering mungkin, tapi jangan lupa mengingatkan mereka untuk berhenti. Pastikan pula anak Anda tetap melakukan aktivitas di lingkungan sosial. Dari ke 10 Manfaat positif bermain game yang di paparkan diatas, semuanya tergantung bagaimana kita menyikapinya. Bermain game yang terlalu lama dan bahkan seharian menghabiskan waktu untuk bermain game, tentu hal ini sangat tidak baik untuk kesehatan dan akan merugikan diri Anda sendiri.
+</p></hgroup></article>
+			</section>
+			<aside>
+				<section class="popular-recipes">
+					<h2>My Blog</h2>
+					<a href="">Games</a>
+					<a href="">Anime</a>
+					<a href="">Film</a>
+					<a href="">News</a>
+				</section>
+				<section class="contact-details">
+					<h2>Contacs</h2>
+					<p>chondroseto@gmail.com<br />
+					chondroseto@windowslive.com<br />
+				</section>
+				<section>
+				<h2>Play Music</h2>
+				<audio controls> 
+<source src="biashacker.mp3" type="audio/mpeg" > 
+<audio>
+				</section>
+			</aside>
+			<footer>
+				&copy; 2016 Chondro Seto Nur Suryawan
+			</footer>
+		</div><!-- .wrapper -->
+	</body>
+</html>

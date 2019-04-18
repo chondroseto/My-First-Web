@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>INAGAMES</title>
+		<style type="text/css">
+			header, section, footer, aside, nav, article, figure, figcaption {
+				display: block;}
+			body {
+				color: #666666;
+				background-color: #f9f8f6;
+				background-image: url("images/game.jpg"); /*lokasi gambar*/
+				background-position: center;
+				font-family: Georgia, Times, serif;
+				line-height: 1.4em; /*Posisi kata kata pada home dinaikan/diturunkan*/
+				margin: 0px;}
+			.wrapper {
+				width: 1000px; /*merperlebar body*/
+				margin: 0px auto 0px auto; /*memperkecil/memperbesar jarak antara header dan footer dengan pojok batas masing-masing*/
+				border: 0px solid #000000;  /*garis tepi pada bodi*/   
+				background-color: #ffffff;} /*meberi warna pada bodi*/
+			header {
+				height: 270px; /*merperlebar gambar yang bisa dilihat pada header*/
+				background-image: url(images/head.jpg);} /*lokasi gambar*/
+			h1 {
+				text-indent: -9999px;
+				width: 940px;
+				height: 130px;
+				margin: 0px;}
+			nav, footer {
+				clear: both;
+				color: blue; /*merubah warna text pada footer*/
+				background-color: #80C8FE;/*merubah warna pada footer dan navigator*/
+				height: 30px;} /*mempertinggi footer*/
+			nav ul {
+				margin: 0px;}
+			nav li {
+				display: inline; /*inline berarti vertical submenu jika inline-table berarti horizontal submenu jika none maka tidak ada submenu*/
+				margin-right: 0px;} /*memperbesar lebar navigator dan jarak kosong tiap menu*/
+			nav li a {
+				color: cyan;} /*merubah warna text saat disorot*/
+			nav li a:hover, nav
+			li a.current {
+				color: red;} /*memngubah warna text navigator Home*/
+			
+nav {
+	margin: 90px auto; /*menaikan/menurunkan navigator*/
+	text-align: center;
+}
+
+nav ul ul {
+	display: none;
+}
+
+	nav ul li:hover > ul {
+		display: block;
+	}
+
+
+nav ul {
+	background: #80C8FE; 
+	padding: 0 0px;
+	border-radius: 0px;  
+	list-style: none;
+	position: relative;
+	display: inline-table; /*jika inline maka akan vertikal navigator/ menhilang sendangkan inline-table agar navigator horizontal*/
+}
+	nav ul:after {
+		content: ""; clear: both; display: block;
+	}
+
+	nav ul li {
+		float: left; /*mengubah awal susunannya pada navigator*/
+	}
+		nav ul li:hover {
+			background: black; /*mengubah background warna saat disorot pada navigator*/
+		}
+			nav ul li:hover a {
+				color: cyan; /*saat disorot oleh mouse maka text pada navigator akan berubah*/
+			}
+		
+		nav ul li a {
+			display: block; padding: 15px 52.1px; /*mengatur lebar dan tinggi navigator*/
+			color: red; text-decoration: none; /*color : merubah warna text pada navigator*/
+		}
+			
+		
+	nav ul ul {
+		background: #80C8FE; border-radius: 0px; padding: 0px;
+		position: absolute; top: 100%;
+	}
+		nav ul ul li {
+			float: none; 
+			border-top: 0px solid #80C8FE;
+			border-bottom: 0px solid #53bd84; position: relative;
+		}
+			nav ul ul li a {
+				padding: 10px 79px; /*mengubah lebar dan tinggi pada submenu*/
+				color: red; 
+			}	
+				nav ul ul li a:hover {
+					background: black; /*mengubah warna background pada submenu*/
+				}
+		
+	nav ul ul ul {
+		position: absolute; left: 100%; top:0;
+	}
+			section.courses {
+				float: left;
+				width: 678px; /*semakin besar maka semakin bergeser content ke arah yang ditentukan oleh float*/
+				border-right: 0px solid #eeeeee;} /*menambahkan  garis tepi untuk aside*/
+			article {
+				clear: both;
+				overflow: auto;
+				width: 100%;}
+			hgroup {
+				margin-top: 27px;} /*menaikan/menurunkan kata-kata pada postingan di home*/
+			figure {
+				float: left;
+				width: 300px; /*memperbesar lebar daerah gambar pada home*/
+				height: 250px; /*memperbesar tinggi daerah gambar pada home*/
+				padding: 0px; /*memperbesar/memperkecil jarak antara border dengan gambar*/
+				margin: 10px; /*memperbesar/memperkecil jarak setiap gambar pada home*/
+				border: 1px solid #eeeeee;} /*menambahkan  garis pada tempat figure gambar*/
+			figcaption {
+				font-size: 90%;
+				text-align: left;}
+			aside {
+				width: 230px;
+				float: left;
+				padding: 0px 0px 0px 10px;} /*memperbesar/memperkecil jarak content dengan aside note : angka yang diganti yang paling kanan*/
+			aside section a {
+				display: block;
+				padding: 10px; /*memperbesar/memperkecil jarak setiap section pada aside*/
+				border-bottom: 0px solid #eeeeee;} /*menambahkan  garis pada section yang memiliki unsur link*/
+			aside section a:hover {
+				color: cyan; /*merubah warna text saat di sorot*/
+				background-color: black;} /*merubah warna background saat disorot*/
+			a {
+				color: #de6581;
+				text-decoration: none;}
+			h1, h2, h3 {
+				font-weight: normal;}
+			h2 {
+				margin: 10px 0px 5px 0px;
+				padding: 0px;}
+			h3 {
+				margin: 0px 0px 10px 0px;
+				color: gray;}
+			aside h2 {
+				padding: 30px 0px 10px 0px;
+				color: blue;}
+			footer {
+				font-size: 80%;
+				padding: 7px 0px 0px 20px;}
+		</style>
+	</head>
+	<body>
+			<div class="wrapper">
+			<header>
+				<h1>INAGAMES : Indonesia Games</h1>
+				<nav>
+					<ul>
+						<li><a href="index.html" class="current">Home</a></li>
+						<li><a href="">Review Games</a>
+							<ul>
+								<li><a href="article1.html">PC</a></li>
+								<li><a href="article1.html">Mobile</a></li>
+							</ul>
+						</li>
+						<li><a href="article2.html">List Games Studios</a></li>	
+						<li><a href="article3.html">Tips for Gamers</a></li>
+						<li><a href="article5.html">Technlogy</a></li>
+					</ul>
+				</nav>
+			</header>
+			<section class="courses">
+			<article>
+			<hgroup>
+			<h2 align="middle"><b>Tips Sehat Bermain Games</b></h2>
+<p>
+1. Batasi Waktu Main Game<br/>
+
+<br/>Kalau sudah enak main game biasanya orang lupa waktu untuk berhenti dan melakukan kegiatan berguna lain. Di awal main game tetapkan waktu sekitar satu atau dua jam saja. Kalau perlu pasang jam weker untuk mengetahui batasan waktu.
+
+<br/>Main game kelamaan dapat berdampak buruk pada tubuh kita, karena otak yang konsentrasi penuh pada game akan mengabaikan kegiatan penting atau kebutuhan tubuh seperti makan, minum, ibadah, mandi, tidur, istirahat, olahraga, bersosialisasi, dan lain sebagainya. Terkadang orang baru sadar setelah main game terasa pusing.
+<br/><br/>
+2. Jangan Main Game Tiada Akhir<br/>
+
+<br/>Usahakan, pilih game yang tidak bikin kita kecanduan untuk memainkannya berbulan-bulan dan bertahun-tahun dan menghabiskan banyak waktu seharian untuk memainkannya agar menghasilkan game yang baik.
+
+<br/>Tentu saja hal itu akan membatasi kita untuk mengetahui game-game baru lain, membuat penasaran terus, dan kadang bisa merasa malu jika status account game yang kita mainkan memiliki hasil yang rendah dibanding gamer lain. Alangkah baiknya jika kita gunakan waktu yang ada untuk kegiatan lain.
+<br/><br/>
+3. Hindari Game Sulit yang Memancing Emosi<br/>
+
+<br/>Game yang susah terkadang bikin kita kesal dan akhirnya emosi dan marah-marah nggak jelas. Pencetan dan joystick pun bisa jadi sasaran kalau lagi kalap dan bisa dibanting, dipukul, diinjak, dan beragam tindak kejam lainnya.
+
+<br/>Tidak hanya mesin konsol atau komputer PC/laptop saja yang jadi rusak. Tangan, kaki dan badan pun bisa sakit kalau melakukan tindak kekerasan pada benda mati yang keras dan padat. Hentikan main game jika sudah emosi dan langsung nonton teve untuk meredam amarah.
+<br/><br/>
+4. Mainkan Game yang Mengasah Otak<br/>
+
+<br/>Ada banyak game yang bisa meningkatkan kemampuan berpikir otak kita seperti game puzzle, game kasus, game ingatan, game strategi, dan sebagainya. Ada juga game yang lucu bisa menghibur kita saat memainkannya. 
+
+<br/>Analisa game yang Anda mainkan, apakah dapat memberikan dampak positif serta bisa memberi hiburan atau kemampuan berpikir. Jika tidak memberikan apapun, berarti game itu hanya membuang waktu Anda saja.
+<br/><br/>
+5. Ajak Orang Lain Main Bersama<br/>
+
+<br/>Main game beramai-ramai jauh lebih baik daripada main sendirian. Dengan mengajak teman, keluarga, tetangga, pacar, dan sebagainya main game kita akan mempererat hubungan kita dengan orang lain. Tentunya, selama game yang dimainkan cocok untuk dimainkan bersama-sama dan tidak bikin emosi. 
+
+<br/>Main game sendirian saja akan menghilangkan jiwa sosial kita dan dapat mengurangi jumlah teman kita dari waktu ke waktu. Teman kenalan dari main game online bukan teman nyata karena orang itu, bisa jadi, tidak jujur pada kita. Teman di kehidupan nyata jauh lebih berharga daripada teman maya.
+<br/><br/>
+6. Jangan Hamburkan Uang<br/>
+
+<br/>Sayangi uang Anda dan sebaiknya ditabung untuk bekal masa depan dan untuk jaga-jaga saat nggak punya duit. Hitung semua pengeluaran dari nge-game, seperti ongkos transpor, listrik, akses internet, makanan, minuman, bayar rental, dan lain-lain. 
+
+<br/>Hitung juga nilai waktu yang Anda buang percuma untuk main game seandainya waktu itu anda pakai untuk kegiatan yang menghasilkan.
+
+<br/>Ada orang yang suka main game untuk mengejar hadiah tiket/kupon untuk ditukarkan dengan hadiah yang nilainya jauh lebih rendah dari uang yang telah kita keluarkan untuk main game. Hitung penghematan jangka panjang yang dapat anda lakukan jika semua uang itu Anda kumpulkan.
+<br/><br/>
+7. Sayangi Tubuh Anda<br/>
+
+<br/>Jika suatu game membuat kita pusing karena sudut pandang game yang tidak sesuai dengan kemampuan otak kita, segera hentikan dan jangan mainkan lagi. Buat apa kita main game tapi membuat badan kita menjadi sakit. 
+
+<br/>Bisa jadi game yang dimainkan bikin pegal, capek dan lemas jika dimainkan terlalu lama. Bisa juga bikin jari tangan kita sakit dan banyak keluhan tubuh lainnya. Intinya kita harus mengetahui batasan ketahanan tubuh kita pada game yang ada. Jangan terlalu banyak main game yang tidak bagus untuk tubuh kita.
+</p></hgroup></article>
+			</section>
+			<aside>
+				<section class="popular-recipes">
+					<h2>My Blog</h2>
+					<a href="">Games</a>
+					<a href="">Anime</a>
+					<a href="">Film</a>
+					<a href="">News</a>
+				</section>
+				<section class="contact-details">
+					<h2>Contacs</h2>
+					<p>chondroseto@gmail.com<br />
+					chondroseto@windowslive.com<br />	
+				</section>
+				<section>
+				<h2>Play Music</h2>
+				<audio controls> 
+<source src="biashacker.mp3" type="audio/mpeg" > 
+<audio>
+				</section>
+			</aside>
+			<footer>
+				&copy; 2016 Chondro Seto Nur Suryawan
+			</footer>
+		</div><!-- .wrapper -->
+	</body>
+</html>
